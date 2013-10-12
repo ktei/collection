@@ -1,0 +1,12 @@
+@extends('layouts.master')
+
+@section('content')
+<div class="jumbotron">
+    <h1>Make your collection</h1>
+    <p>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
+    <p>To see the difference between static and fixed top navbars, just scroll.</p>
+    <p>
+        <a class="btn btn-lg btn-success" href="{{URL::action('UsersController@create')}}">Sign up for free</a>
+    </p>
+</div>
+@stop

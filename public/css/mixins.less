@@ -1,0 +1,16 @@
+@import '../packages/bootstrap/less/mixins.less';
+
+.border-radius(@radius) {
+  .border-top-radius(@radius);
+  .border-right-radius(@radius);
+  .border-left-radius(@radius);
+  .border-bottom-radius(@radius);
+}
+
+.bordered-form(@max-width) {
+  max-width: @max-width;
+  margin: 0 auto;
+  padding: 20px;
+  .box-shadow(#888 0 0 5px);
+  .border-radius(5px);
+}
