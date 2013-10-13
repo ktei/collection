@@ -2,29 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/database/migrations/2013_10_11_154132_init.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/database/migrations/2013_10_12_011037_add_cover_id_to_albums_table.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/PagesController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/SessionsController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/UsersController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/header/_guest.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/header/_user.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/app.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/app.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/users/create.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/config/development/database.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/config/testing/database.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/pages/home.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/main.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/master.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/mixins.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/mixins.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/database.php" afterPath="$PROJECT_DIR$/app/config/database.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/AlbumsController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/observers/ObserverServiceProvider.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/tests/controllers/PagesControllerTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/repositories/RepositoryServiceProvider.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/tests/controllers/SessionsControllerTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/observers/UserObserver.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/tests/models/UserTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/validation/UserValidator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/validation/UserValidatorInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/tests/validators/UserValidatorTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/tests/controllers/UsersControllerTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/repositories/eloquent/UsersRepository.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/repositories/UsersRepositoryInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/validation/ValidationServiceProvider.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/sessions/create.blade.php" />
+      <change type="DELETED" beforePath="C:\dev\php\collection\app\tests\ExampleTest.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/BaseController.php" afterPath="$PROJECT_DIR$/app/controllers/BaseController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/PagesController.php" afterPath="$PROJECT_DIR$/app/controllers/PagesController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/SessionsController.php" afterPath="$PROJECT_DIR$/app/controllers/SessionsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tests/TestCase.php" afterPath="$PROJECT_DIR$/app/tests/TestCase.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/User.php" afterPath="$PROJECT_DIR$/app/models/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/UsersController.php" afterPath="$PROJECT_DIR$/app/controllers/UsersController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/app.php" afterPath="$PROJECT_DIR$/app/config/app.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes.php" afterPath="$PROJECT_DIR$/app/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap/start.php" afterPath="$PROJECT_DIR$/bootstrap/start.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="collection.iws" />
@@ -32,26 +34,44 @@
     <file path="/bower.json" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381491370919" ignored="false" />
     <file path="/composer.json" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381491603016" ignored="false" />
     <file path="/.gitignore" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381540734375" ignored="false" />
-    <file path="/PagesController.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381494558254" ignored="false" />
-    <file path="/Dummy.txt" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381540984221" ignored="false" />
+    <file path="/PagesController.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381643283971" ignored="false" />
+    <file path="/Dummy.txt" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381631113328" ignored="false" />
     <file path="/master.blade.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381495935624" ignored="false" />
     <file path="/main.coffee" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381496351181" ignored="false" />
     <file path="/a.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381540953842" ignored="false" />
     <file path="/a.coffee" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381493990798" ignored="false" />
     <file path="/a.less" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381493999112" ignored="false" />
-    <file path="/routes.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381494506740" ignored="false" />
+    <file path="/routes.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381642108516" ignored="false" />
     <file path="/home.blade.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381497209425" ignored="false" />
     <file path="/main.js" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381495014375" ignored="false" />
     <file path="/_guest.blade.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381500428928" ignored="false" />
     <file path="/app.less" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381499872786" ignored="false" />
-    <file path="/UsersController.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381497322010" ignored="false" />
-    <file path="/SessionsController.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381500439226" ignored="false" />
-    <file path="/create.blade.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381500557829" ignored="false" />
+    <file path="/UsersController.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381642919280" ignored="false" />
+    <file path="/SessionsController.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381643459370" ignored="false" />
+    <file path="/create.blade.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381544371379" ignored="false" />
     <file path="/mixins.less" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381498647421" ignored="false" />
     <file path="/2013_10_11_154132_init.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381539211436" ignored="false" />
     <file path="C:/startup/makeupsocial/app/database/migrations/2013_08_31_060942_init_db.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381539066234" ignored="false" />
-    <file path="/a.dummy" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381540311903" ignored="false" />
+    <file path="/a.dummy" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381632447429" ignored="false" />
     <file path="/2013_10_12_011037_add_cover_id_to_albums_table.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381540396519" ignored="false" />
+    <file path="/RepositoryServiceProvider.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381631154195" ignored="false" />
+    <file path="/UsersRepositoryInterface.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381636720822" ignored="false" />
+    <file path="/EloquentUsersRepository.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381631382754" ignored="false" />
+    <file path="/User.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381632242161" ignored="false" />
+    <file path="/UserObserver.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381631646073" ignored="false" />
+    <file path="/ObserverServiceProvider.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381632149794" ignored="false" />
+    <file path="/TestCase.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381640061803" ignored="false" />
+    <file path="/UserTest.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381632702747" ignored="false" />
+    <file path="/UserValidator.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381640176887" ignored="false" />
+    <file path="/UsersControllerTest.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381642892625" ignored="false" />
+    <file path="/UsersRepository.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381636740293" ignored="false" />
+    <file path="/ValidationServiceProvider.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381637491334" ignored="false" />
+    <file path="/app.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381637550670" ignored="false" />
+    <file path="/UserValidatorTest.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381640663609" ignored="false" />
+    <file path="/Factory.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381640520060" ignored="false" />
+    <file path="/SessionsControllerTest.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381642142203" ignored="false" />
+    <file path="/AlbumsController.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381641597342" ignored="false" />
+    <file path="/PagesControllerTest.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381643213026" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,71 +91,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="app.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/css/app.css">
+      <file leaf-file-name="UsersControllerTest.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/tests/controllers/UsersControllerTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5917" column="13" selection-start="119337" selection-end="119337" vertical-scroll-proportion="0.0">
+            <state line="28" column="52" selection-start="1156" selection-end="1156" vertical-scroll-proportion="-14.592592">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2013_10_11_154132_init.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/database/migrations/2013_10_11_154132_init.php">
+      <file leaf-file-name="UsersController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/UsersController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="28" selection-start="407" selection-end="407" vertical-scroll-proportion="-18.0">
+            <state line="24" column="62" selection-start="897" selection-end="940" vertical-scroll-proportion="-15.925926">
+              <folding>
+                <element signature="e#7#84#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SessionsControllerTest.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/tests/controllers/SessionsControllerTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="66" selection-start="687" selection-end="687" vertical-scroll-proportion="-16.666666">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2013_10_12_011037_add_cover_id_to_albums_table.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/database/migrations/2013_10_12_011037_add_cover_id_to_albums_table.php">
+      <file leaf-file-name="PagesControllerTest.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/tests/controllers/PagesControllerTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="0" selection-start="417" selection-end="417" vertical-scroll-proportion="-14.0">
+            <state line="15" column="25" selection-start="453" selection-end="453" vertical-scroll-proportion="-10.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="database.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/database.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="10" selection-start="1787" selection-end="1787" vertical-scroll-proportion="-8.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="start.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bootstrap/start.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="4" selection-start="460" selection-end="460" vertical-scroll-proportion="-2.5925925">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="database.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/testing/database.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="9" selection-start="216" selection-end="216" vertical-scroll-proportion="-6.6666665">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="database.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/development/database.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="38" selection-start="216" selection-end="216" vertical-scroll-proportion="-6.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mail.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/mail.php">
+      <file leaf-file-name="BaseController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/BaseController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
@@ -143,10 +138,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="PagesController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/PagesController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="1" selection-start="234" selection-end="234" vertical-scroll-proportion="-6.6666665">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SessionsController.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/SessionsController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="5" selection-start="485" selection-end="485" vertical-scroll-proportion="0.44582042">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserValidator.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/validation/UserValidator.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="52" selection-start="421" selection-end="421" vertical-scroll-proportion="-6.6666665">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserValidatorTest.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/tests/validators/UserValidatorTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="0" selection-start="7" selection-end="29" vertical-scroll-proportion="-1.3333334">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="7" selection-start="65" selection-end="65" vertical-scroll-proportion="0.13202934">
+            <state line="10" column="0" selection-start="312" selection-end="312" vertical-scroll-proportion="-6.6666665">
               <folding />
             </state>
           </provider>
@@ -170,22 +201,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+        <option value="$PROJECT_DIR$/app/validation/ValidationServiceProvider.php" />
+        <option value="$PROJECT_DIR$/app/config/app.php" />
+        <option value="$PROJECT_DIR$/app/controllers/BaseController.php" />
+        <option value="$PROJECT_DIR$/app/tests/TestCase.php" />
+        <option value="$PROJECT_DIR$/app/validation/UserValidator.php" />
+        <option value="$PROJECT_DIR$/app/tests/Factory.php" />
+        <option value="$PROJECT_DIR$/app/tests/validators/UserValidatorTest.php" />
+        <option value="$PROJECT_DIR$/app/observers/UserObserver.php" />
+        <option value="$PROJECT_DIR$/app/controllers/AlbumsController.php" />
+        <option value="$PROJECT_DIR$/app/tests/controllers/SessionsControllerTest.php" />
+        <option value="$PROJECT_DIR$/app/tests/controllers/UsersControllerTest.php" />
         <option value="$PROJECT_DIR$/app/controllers/UsersController.php" />
-        <option value="$PROJECT_DIR$/app/views/pages/home.blade.php" />
-        <option value="$PROJECT_DIR$/public/css/mixins.less" />
-        <option value="$PROJECT_DIR$/public/css/app.less" />
-        <option value="$PROJECT_DIR$/app/views/layouts/header/_guest.blade.php" />
-        <option value="$PROJECT_DIR$/app/controllers/SessionsController.php" />
+        <option value="$PROJECT_DIR$/app/tests/controllers/PagesControllerTest.php" />
+        <option value="$PROJECT_DIR$/app/controllers/PagesController.php" />
         <option value="$PROJECT_DIR$/app/routes.php" />
-        <option value="$PROJECT_DIR$/app/views/users/create.blade.php" />
-        <option value="$PROJECT_DIR$/app/config/testing/database.php" />
-        <option value="$PROJECT_DIR$/app/config/database.php" />
-        <option value="$PROJECT_DIR$/bootstrap/start.php" />
-        <option value="$PROJECT_DIR$/app/config/development/database.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2013_10_12_011037_add_cover_id_to_photos_table.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2013_10_12_011037_add_cover_id_to_albums_table.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2013_10_11_154132_init.php" />
-        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/app/controllers/SessionsController.php" />
       </list>
     </option>
   </component>
@@ -268,122 +299,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="collection" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="collection" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="packages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="collection" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="collection" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="packages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="collection" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="collection" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main.coffee" />
-              <option name="myItemType" value="com.intellij.plugins.watcher.projectView.NestingTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="collection" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="collection" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="collection" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="collection" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app.less" />
-              <option name="myItemType" value="com.intellij.plugins.watcher.projectView.NestingTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="collection" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="collection" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="bootstrap" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -421,6 +336,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="users" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="collection" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="collection" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sessions" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -526,7 +463,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
+              <option name="myItemId" value="validation" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -544,11 +481,149 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="collection" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="collection" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="migrations" />
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="validators" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="collection" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="collection" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="collection" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="collection" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="collection" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="collection" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="repositories" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="collection" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="collection" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="repositories" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eloquent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="collection" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="collection" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="observers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="collection" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="collection" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -585,50 +660,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="collection" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="collection" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="testing" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="collection" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="collection" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="development" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -683,18 +714,22 @@
       <created>1381491059713</created>
       <updated>1381491059713</updated>
     </task>
+    <task id="LOCAL-00001" summary="db migrations">
+      <created>1381541018161</created>
+      <updated>1381541018161</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32916668" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25611326" sideWeight="0.67083335" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26254827" sideWeight="0.67083335" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286908" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -704,6 +739,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -771,114 +807,118 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/users/create.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/observers/UserObserver.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="44" selection-start="546" selection-end="546" vertical-scroll-proportion="0.0">
+        <state line="6" column="5" selection-start="108" selection-end="108" vertical-scroll-proportion="-4.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/header/_guest.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/models/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="81" selection-start="706" selection-end="706" vertical-scroll-proportion="0.38536584">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#40#74#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/way/laravel-test-helpers/src/Way/Tests/Factory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="27" selection-start="1404" selection-end="1404" vertical-scroll-proportion="0.34755135">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/mixins.less">
+    <entry file="file://$PROJECT_DIR$/app/controllers/AlbumsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="1" selection-start="352" selection-end="352" vertical-scroll-proportion="0.0">
+        <state line="5" column="0" selection-start="86" selection-end="86" vertical-scroll-proportion="-3.3333333">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/packages/bootstrap/less/variables.less">
+    <entry file="file://$PROJECT_DIR$/app/repositories/UsersRepositoryInterface.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="34" selection-start="382" selection-end="382" vertical-scroll-proportion="0.026745914">
+        <state line="7" column="20" selection-start="106" selection-end="106" vertical-scroll-proportion="-4.6666665">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/app.less">
+    <entry file="file://$PROJECT_DIR$/app/repositories/eloquent/UsersRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="16" selection-start="144" selection-end="144" vertical-scroll-proportion="0.0">
+        <state line="9" column="0" selection-start="211" selection-end="211" vertical-scroll-proportion="-6.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/SessionsController.php">
+    <entry file="file://$PROJECT_DIR$/app/validation/UserValidator.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="89" selection-end="89" vertical-scroll-proportion="0.0">
+        <state line="10" column="52" selection-start="421" selection-end="421" vertical-scroll-proportion="-6.6666665">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/app.css">
+    <entry file="file://$PROJECT_DIR$/app/tests/controllers/UsersControllerTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5917" column="13" selection-start="119337" selection-end="119337" vertical-scroll-proportion="0.0">
+        <state line="28" column="52" selection-start="1156" selection-end="1156" vertical-scroll-proportion="-14.592592">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/mail.php">
+    <entry file="file://$PROJECT_DIR$/app/tests/validators/UserValidatorTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="7" selection-end="29" vertical-scroll-proportion="-1.3333334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/BaseController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bootstrap/start.php">
+    <entry file="file://$PROJECT_DIR$/app/tests/controllers/PagesControllerTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="4" selection-start="460" selection-end="460" vertical-scroll-proportion="-2.5925925">
+        <state line="15" column="25" selection-start="453" selection-end="453" vertical-scroll-proportion="-10.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/testing/database.php">
+    <entry file="file://$PROJECT_DIR$/app/controllers/PagesController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="9" selection-start="216" selection-end="216" vertical-scroll-proportion="-6.6666665">
+        <state line="10" column="1" selection-start="234" selection-end="234" vertical-scroll-proportion="-6.6666665">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/development/database.php">
+    <entry file="file://$PROJECT_DIR$/app/controllers/UsersController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="38" selection-start="216" selection-end="216" vertical-scroll-proportion="-6.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="10" selection-start="1787" selection-end="1787" vertical-scroll-proportion="-8.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2013_10_12_011037_add_cover_id_to_albums_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="417" selection-end="417" vertical-scroll-proportion="-14.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="16" selection-start="86" selection-end="86" vertical-scroll-proportion="0.13372956">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2013_10_11_154132_init.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="28" selection-start="407" selection-end="407" vertical-scroll-proportion="-18.0">
-          <folding />
+        <state line="24" column="62" selection-start="897" selection-end="940" vertical-scroll-proportion="-15.925926">
+          <folding>
+            <element signature="e#7#84#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="7" selection-start="65" selection-end="65" vertical-scroll-proportion="0.13202934">
+        <state line="10" column="0" selection-start="312" selection-end="312" vertical-scroll-proportion="-6.6666665">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/tests/controllers/SessionsControllerTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="66" selection-start="687" selection-end="687" vertical-scroll-proportion="-16.666666">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/SessionsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="5" selection-start="485" selection-end="485" vertical-scroll-proportion="0.44582042">
           <folding />
         </state>
       </provider>

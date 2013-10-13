@@ -4,11 +4,12 @@
 	"keywords": ["framework", "laravel"],
 	"license": "MIT",
 	"require": {
-		"laravel/framework": "4.0.*"
+		"laravel/framework": "4.0.8"
 	},
     "require-dev": {
         "fzaninotto/faker": "*",
         "mockery/mockery": "*",
+        "cordoval/hamcrest-php": "dev-master",
         "way/laravel-test-helpers": "*"
     },
 	"autoload": {
@@ -16,6 +17,10 @@
 			"app/commands",
 			"app/controllers",
 			"app/models",
+            "app/observers",
+            "app/repositories",
+            "app/repositories/eloquent",
+            "app/validation",
 			"app/database/migrations",
 			"app/database/seeds",
 			"app/tests/TestCase.php"
