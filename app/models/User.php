@@ -12,13 +12,15 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 */
 	protected $table = 'users';
 
+    protected $fillable = [
+        'email',
+        'full_name',
+        'password'
+    ];
 
-    protected $guarded = array(
-        'id',
-        'has_avatar',
-        'albums_count',
-        'photos_count'
-    );
+    public function albums() {
+        return $this->hasMany('Album');
+    }
 
 	/**
 	 * Get the unique identifier for the user.
