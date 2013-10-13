@@ -6,6 +6,7 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase {
 
     public function setUp() {
         parent::setUp();
+        Route::enableFilters();
         Mail::pretend(true);
     }
 

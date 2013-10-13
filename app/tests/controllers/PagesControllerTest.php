@@ -11,8 +11,7 @@ class PagesControllerTest extends TestCase {
     }
 
     public function test_home_should_redirect_to_albums_index_after_login() {
-        $this->prepareDatabase();
-        $user = Factory::create('Rui\Collection\Models\User', ['password' => 'Qwerty123?']);
+        $user = Factory::user();
         $this->be($user);
 
         $this->action('GET', 'PagesController@home');

@@ -8,6 +8,11 @@ class RepositoryServiceProvider extends ServiceProvider {
             'Rui\Collection\Repositories\UsersRepositoryInterface',
             'Rui\Collection\Repositories\Eloquent\UsersRepository'
         );
+
+        $this->app->bind(
+            'Rui\Collection\Repositories\AlbumsRepositoryInterface',
+            'Rui\Collection\Repositories\Eloquent\AlbumsRepository'
+        );
     }
 
 }

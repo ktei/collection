@@ -1,5 +1,5 @@
 <?php
-
+use Way\Tests\Factory;
 
 class SessionsControllerTest extends TestCase {
 
@@ -19,10 +19,21 @@ class SessionsControllerTest extends TestCase {
     }
 
     public function test_store_should_succeed() {
+        Auth::shouldReceive('getDrivers')->once()->andReturn(arrayValue());
         Auth::shouldReceive('attempt')->once()->andReturn(true);
 
-        $this->action('POST', 'SessionsController@store');
+        $this->action('POST', 'SessionsController@store', [], $this->loginInput);
 
         $this->assertRedirectedToAction('AlbumsController@index');
+    }
+
+    public function test_destroy_should_succeed() {
+        $user = Factory::user();
+        $this->be($user);
+
+        $this->action('GET', 'SessionsController@destroy');
+
+        $this->assertRedirectedToAction('SessionsController@create');
+        $this->assertSessionHas('notice');
     }
 }

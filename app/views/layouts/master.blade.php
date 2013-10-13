@@ -26,6 +26,7 @@
             @endif
         </header>
         <div class="container">
+            @include('layouts._flash_message')
             @section('content')
             <div>
                 <h1>Opps! There is something wrong here!</h1>

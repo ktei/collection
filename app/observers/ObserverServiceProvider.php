@@ -2,8 +2,6 @@
 
 use Illuminate\Support\ServiceProvider;
 
-use Rui\Collection\Models\User as User;
-
 class ObserverServiceProvider extends ServiceProvider {
 
     public function register() {
@@ -11,6 +9,6 @@ class ObserverServiceProvider extends ServiceProvider {
     }
 
     public function boot() {
-        User::observe(new UserObserver);
+
     }
 }

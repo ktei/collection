@@ -1,8 +1,7 @@
-<?php namespace Rui\Collection\Models;
+<?php
 
 use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableInterface;
-use Illuminate\Database\Eloquent\Model as Eloquent;
 
 class User extends Eloquent implements UserInterface, RemindableInterface {
 
@@ -13,12 +12,13 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 */
 	protected $table = 'users';
 
-	/**
-	 * The attributes excluded from the model's JSON form.
-	 *
-	 * @var array
-	 */
-	protected $hidden = array('password');
+
+    protected $guarded = array(
+        'id',
+        'has_avatar',
+        'albums_count',
+        'photos_count'
+    );
 
 	/**
 	 * Get the unique identifier for the user.
@@ -50,4 +50,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 		return $this->email;
 	}
 
+    public function setPasswordAttribute($password) {
+        $this->attributes['password'] = Hash::make($password);
+    }
 }

@@ -36,9 +36,9 @@ class Init extends Migration {
             $table->string('email');
             $table->string('password');
             $table->string('full_name');
-            $table->boolean('has_avatar');
-            $table->integer('albums_count');
-            $table->integer('photos_count');
+            $table->boolean('has_avatar')->default(false);
+            $table->integer('albums_count')->default(0);
+            $table->integer('photos_count')->default(0);
 
             $table->timestamps();
 
@@ -52,7 +52,7 @@ class Init extends Migration {
             $table->integer('user_id')->unsigned();
             $table->string('name');
             $table->string('description');
-            $table->integer('photos_count');
+            $table->integer('photos_count')->default(0);;
 
             $table->timestamps();
 
@@ -66,7 +66,7 @@ class Init extends Migration {
             $table->increments('id');
             $table->integer('album_id')->unsigned();
             $table->text('description');
-            $table->integer('comments_count');
+            $table->integer('comments_count')->default(0);;
 
             $table->timestamps();
 

@@ -16,7 +16,13 @@ class UserValidatorTest extends TestCase {
         $this->validator = App::make('Rui\Collection\Validation\UserValidatorInterface');
     }
 
-    public function test_validate_store_with_full_name_too_long_shuold_fail() {
+    public function test_validate_store_with_valid_data_should_succeed() {
+        $validation = $this->validator->validateStore($this->storeInput);
+
+        assertThat(true, equalTo($validation));
+    }
+
+    public function test_validate_store_with_full_name_too_long_should_fail() {
         $input = array_merge($this->storeInput, ['full_name' => $this->randomString(101)]);
 
         $actual = $this->validator->validateStore($input);
@@ -62,8 +68,8 @@ class UserValidatorTest extends TestCase {
     }
 
     public function test_validate_store_with_duplicate_email_should_fail() {
-        Factory::create('Rui\Collection\Models\User', ['email' => 'ktei2008@gmail.com']);
-        $input = array_merge($this->storeInput, ['email' => 'ktei2008@gmail.com']);
+        Factory::create('User', array_merge($this->storeInput));
+        $input = array_merge($this->storeInput, ['full_name' => 'another name']);
 
         $actual = $this->validator->validateStore($input);
 
