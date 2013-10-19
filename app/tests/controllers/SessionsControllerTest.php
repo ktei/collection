@@ -6,10 +6,10 @@ class SessionsControllerTest extends TestCase {
     public function setUp() {
         parent::setUp();
         $this->faker = \Faker\Factory::create();
-        $this->loginInput = [
+        $this->loginInput = array(
             'email' => $this->faker->email,
             'password' => 'Qwerty123?'
-        ];
+        );
     }
 
     public function test_create_should_succeed() {
@@ -22,7 +22,7 @@ class SessionsControllerTest extends TestCase {
         Auth::shouldReceive('getDrivers')->once()->andReturn(arrayValue());
         Auth::shouldReceive('attempt')->once()->andReturn(true);
 
-        $this->action('POST', 'SessionsController@store', [], $this->loginInput);
+        $this->action('POST', 'SessionsController@store', array(), $this->loginInput);
 
         $this->assertRedirectedToAction('AlbumsController@index');
     }

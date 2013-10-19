@@ -12,11 +12,11 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 */
 	protected $table = 'users';
 
-    protected $fillable = [
+    protected $fillable = array(
         'email',
         'full_name',
         'password'
-    ];
+    );
 
     public function albums() {
         return $this->hasMany('Album');

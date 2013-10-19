@@ -5,10 +5,10 @@ class AlbumValidatorTest extends TestCase {
     public function setUp() {
         parent::setUp();
         $this->faker = \Faker\Factory::create();
-        $this->storeInput = [
+        $this->storeInput = array(
             'name' => $this->faker->sentence(3),
             'description' => $this->faker->paragraph()
-        ];
+        );
         $this->validator = App::make('Rui\Collection\Validation\AlbumValidatorInterface');
     }
 
@@ -20,7 +20,7 @@ class AlbumValidatorTest extends TestCase {
     }
 
     public function test_validate_store_with_empty_name_should_fail() {
-        $input = array_merge($this->storeInput, ['name' => '']);
+        $input = array_merge($this->storeInput, array('name' => ''));
 
         $actual = $this->validator->validateStore($input);
 
@@ -29,7 +29,7 @@ class AlbumValidatorTest extends TestCase {
     }
 
     public function test_validate_store_with_name_too_long_should_fail() {
-        $input = array_merge($this->storeInput, ['name' => $this->randomString(151)]);
+        $input = array_merge($this->storeInput, array('name' => $this->randomString(151)));
 
         $actual = $this->validator->validateStore($input);
 
@@ -38,7 +38,7 @@ class AlbumValidatorTest extends TestCase {
     }
 
     public function test_validate_store_with_description_too_long_should_fail() {
-        $input = array_merge($this->storeInput, ['description' => $this->randomString(501)]);
+        $input = array_merge($this->storeInput, array('description' => $this->randomString(501)));
 
         $actual = $this->validator->validateStore($input);
 

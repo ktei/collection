@@ -8,11 +8,11 @@ class UserValidatorTest extends TestCase {
         parent::setUp();
         $this->prepareDatabase();
         $this->faker = \Faker\Factory::create();
-        $this->storeInput = [
+        $this->storeInput = array(
             'email' => $this->faker->email,
             'full_name' => $this->faker->firstName . ' ' . $this->faker->lastName,
             'password' => 'Qwerty123?'
-        ];
+        );
         $this->validator = App::make('Rui\Collection\Validation\UserValidatorInterface');
     }
 
@@ -23,7 +23,7 @@ class UserValidatorTest extends TestCase {
     }
 
     public function test_validate_store_with_full_name_too_long_should_fail() {
-        $input = array_merge($this->storeInput, ['full_name' => $this->randomString(101)]);
+        $input = array_merge($this->storeInput, array('full_name' => $this->randomString(101)));
 
         $actual = $this->validator->validateStore($input);
 
@@ -32,7 +32,7 @@ class UserValidatorTest extends TestCase {
     }
 
     public function test_validate_store_with_password_too_short_should_fail() {
-        $input = array_merge($this->storeInput, ['password' => $this->randomString(3)]);
+        $input = array_merge($this->storeInput, array('password' => $this->randomString(3)));
 
         $actual = $this->validator->validateStore($input);
 
@@ -41,7 +41,7 @@ class UserValidatorTest extends TestCase {
     }
 
     public function test_validate_store_with_empty_email_should_fail() {
-        $input = array_merge($this->storeInput, ['email' => '']);
+        $input = array_merge($this->storeInput, array('email' => ''));
 
         $actual = $this->validator->validateStore($input);
 
@@ -50,7 +50,7 @@ class UserValidatorTest extends TestCase {
     }
 
     public function test_validate_store_with_empty_full_name_should_fail() {
-        $input = array_merge($this->storeInput, ['full_name' => '']);
+        $input = array_merge($this->storeInput, array('full_name' => ''));
 
         $actual = $this->validator->validateStore($input);
 
@@ -59,7 +59,7 @@ class UserValidatorTest extends TestCase {
     }
 
     public function test_validate_store_with_empty_password_should_fail() {
-        $input = array_merge($this->storeInput, ['password' => '']);
+        $input = array_merge($this->storeInput, array('password' => ''));
 
         $actual = $this->validator->validateStore($input);
 
@@ -69,7 +69,7 @@ class UserValidatorTest extends TestCase {
 
     public function test_validate_store_with_duplicate_email_should_fail() {
         Factory::create('User', array_merge($this->storeInput));
-        $input = array_merge($this->storeInput, ['full_name' => 'another name']);
+        $input = array_merge($this->storeInput, array('full_name' => 'another name'));
 
         $actual = $this->validator->validateStore($input);
 
@@ -78,7 +78,7 @@ class UserValidatorTest extends TestCase {
     }
 
     public function test_validate_store_with_invalid_email_should_fail() {
-        $input = array_merge($this->storeInput, ['email' => '@not_an_email']);
+        $input = array_merge($this->storeInput, array('email' => '@not_an_email'));
 
         $actual = $this->validator->validateStore($input);
 

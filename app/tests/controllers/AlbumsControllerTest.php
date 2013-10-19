@@ -6,10 +6,10 @@ class AlbumsControllerTest extends TestCase {
     public function setUp() {
         parent::setUp();
         $this->faker = \Faker\Factory::create();
-        $this->storeInput = [
+        $this->storeInput = array(
             'name' => $this->faker->sentence(3),
             'description' => $this->faker->paragraph()
-        ];
+        );
     }
 
     public function test_index_should_reject_without_login() {
@@ -29,7 +29,8 @@ class AlbumsControllerTest extends TestCase {
 
         $this->assertResponseOk();
         $this->assertViewHas('albums');
-        $albums = $response->original->getData()['albums'];
+        $data = $response->original->getData();
+        $albums = $data['albums'];
         assertThat($albums, is(arrayValue()));
     }
 
@@ -37,14 +38,15 @@ class AlbumsControllerTest extends TestCase {
         $this->prepareDatabase();
         $user = Factory::create('User');
         $this->be($user);
-        Factory::create('Album', ['name' => 'a1', 'updated_at' => strtotime('-2 days')]);
-        Factory::create('Album', ['name' => 'a2', 'updated_at' => strtotime('-1 days')]);
+        Factory::create('Album', array('name' => 'a1', 'updated_at' => strtotime('-2 days')));
+        Factory::create('Album', array('name' => 'a2', 'updated_at' => strtotime('-1 days')));
 
         $response = $this->action('GET', 'AlbumsController@index');
 
         $this->assertResponseOk();
         $this->assertViewhas('albums');
-        $albums = $response->original->getData()['albums'];
+        $data = $response->original->getData();
+        $albums = $data['albums'];
         assertThat($albums, is(arrayValue()));
         assertThat('a2', equalTo($albums[0]->name));
         assertThat('a1', equalTo($albums[1]->name));
@@ -64,7 +66,7 @@ class AlbumsControllerTest extends TestCase {
     public function test_store_should_reject_without_login() {
         $input = $this->storeInput;
 
-        $this->action('POST', 'AlbumsController@store', [], $input);
+        $this->action('POST', 'AlbumsController@store', array(), $input);
 
         $this->assertRedirectedToAction('SessionsController@create');
     }
@@ -80,7 +82,7 @@ class AlbumsControllerTest extends TestCase {
         $mock->shouldReceive('save')->once()->andReturn(integerValue());
         $this->app->instance('Rui\Collection\Repositories\AlbumsRepositoryInterface', $mock);
 
-        $this->action('POST', 'AlbumsController@store', [], $input);
+        $this->action('POST', 'AlbumsController@store', array(), $input);
 
         $this->assertRedirectedToAction('AlbumsController@index');
     }

@@ -35,5 +35,5 @@
         </div>
     </body>
 
-    {{HTML::script('packages/requirejs/require.js', ['data-main' => 'js/main'])}}
+    {{HTML::script('packages/requirejs/require.js', array('data-main' => 'js/main'))}}
 </head>
