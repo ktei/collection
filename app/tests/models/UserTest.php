@@ -8,7 +8,7 @@ class UserTest extends TestCase {
         $user = new User;
         $user->password = 'foo';
 
-        assertThat('hashed', equalTo($user->password));
+        assertThat($user->password, 'hashed');
     }
 
 }

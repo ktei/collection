@@ -24,7 +24,7 @@ class UsersControllerTest extends TestCase {
         $mock->shouldReceive('validateStore')->once()->with($input)->andReturn(true);
         $this->app->instance('Rui\Collection\Validation\UserValidatorInterface', $mock);
         $mock = Mockery::mock('Rui\Collection\Repositories\UsersRepositoryInterface');
-        $mock->shouldReceive('save')->once()->with($input);
+        $mock->shouldReceive('create')->once()->with($input);
         $this->app->instance('Rui\Collection\Repositories\UsersRepositoryInterface', $mock);
         Auth::shouldReceive('getDrivers')->andReturn(arrayValue());
         Auth::shouldReceive('loginUsingId')->once();
@@ -41,7 +41,7 @@ class UsersControllerTest extends TestCase {
             array('full_name' => 'error', 'email' => 'error', 'password' => 'error'));
         $this->app->instance('Rui\Collection\Validation\UserValidatorInterface', $mock);
         $mock = Mockery::mock('Rui\Collection\Repositories\UsersRepositoryInterface');
-        $mock->shouldReceive('save')->never();
+        $mock->shouldReceive('create')->never();
         $this->app->instance('Rui\Collection\Repositories\UsersRepositoryInterface', $mock);
 
         $this->action('POST', 'UsersController@store', array(), array());

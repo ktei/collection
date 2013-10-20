@@ -7,5 +7,7 @@ interface AlbumsRepositoryInterface {
 
     public function all($params = array());
 
-    public function save($input);
+    public function create($input);
+
+    public function update($input);
 }

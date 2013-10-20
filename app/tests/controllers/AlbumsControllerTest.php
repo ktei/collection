@@ -83,7 +83,7 @@ class AlbumsControllerTest extends TestCase {
         $mock->shouldReceive('validateStore')->once()->with($input)->andReturn(true);
         $this->app->instance('Rui\Collection\Validation\AlbumValidatorInterface', $mock);
         $mock = Mockery::mock('Rui\Collection\Repositories\AlbumsRepositoryInterface');
-        $mock->shouldReceive('save')->with(array_merge($input, array('user_id' => $user->id)))->once();
+        $mock->shouldReceive('create')->with(array_merge($input, array('user_id' => $user->id)))->once();
         $this->app->instance('Rui\Collection\Repositories\AlbumsRepositoryInterface', $mock);
 
         $this->action('POST', 'AlbumsController@store', array(), $input);

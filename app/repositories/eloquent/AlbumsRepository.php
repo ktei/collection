@@ -24,9 +24,20 @@ class AlbumsRepository implements AlbumsRepositoryInterface {
         return $results;
     }
 
-    public function save($input) {
-        $album = new Album($input);
-        $album->user_id = $input['user_id'];
+    public function create($params) {
+        $album = new Album($params);
+        $album->user_id = $params['user_id'];
+        $album->save();
+    }
+
+    public function update($params) {
+        $album = Album::findOrFail($params['id']);
+        if (array_key_exists('name', $params)) {
+            $album->name = $params['name'];
+        }
+        if (array_key_exists('description', $params)) {
+            $album->description = $params['description'];
+        }
         $album->save();
     }
 }

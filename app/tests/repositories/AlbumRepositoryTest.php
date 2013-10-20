@@ -43,13 +43,24 @@ class AlbumRepositoryTest extends TestCase {
         assertThat($albums[0]->name, equalTo('album1'));
     }
 
-    public function test_save_album() {
+    public function test_create_album() {
         $user = Factory::create('User');
         $attrs = Factory::attributesFor('Album', array('user_id' => $user->id));
 
-        $this->albumsRepository->save($attrs);
+        $this->albumsRepository->create($attrs);
 
         assertThat(Album::count(), equalTo(1));
         assertThat(Album::first()->user_id, equalTo($user->id));
+    }
+
+    public function test_update_album() {
+        $album = Factory::create('Album');
+        $attrs = array('id' => $album->id, 'name' => 'foo', 'description' => 'bar');
+
+        $this->albumsRepository->update($attrs);
+
+        $actual = Album::findOrFail($album->id);
+        assertThat($actual->name, equalTo('foo'));
+        assertThat($actual->description, equalTo('bar'));
     }
 }

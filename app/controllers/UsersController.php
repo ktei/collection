@@ -19,7 +19,7 @@ class UsersController extends BaseController {
         $input = Input::all();
         $validation = $this->userValidator->validateStore($input);
         if ($validation === true) {
-            $userId = $this->usersRepository->save($input);
+            $userId = $this->usersRepository->create($input);
             Auth::loginUsingId($userId);
             $this->flashSuccess('Your account has been created successfully. Now enjoy!');
             return Redirect::action('AlbumsController@index');

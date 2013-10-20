@@ -31,7 +31,7 @@ class AlbumsController extends BaseController {
         $input = Input::all();
         $validation = $this->albumValidator->validateStore($input);
         if ($validation === true) {
-            $this->albumsRepository->save(array_merge($input, array('user_id' => Auth::user()->id)));
+            $this->albumsRepository->create(array_merge($input, array('user_id' => Auth::user()->id)));
             $this->flashSuccess('Your album has been created successfully.');
             return Redirect::action('AlbumsController@dashboard');
         }
