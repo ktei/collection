@@ -12,11 +12,10 @@ class AlbumValidatorTest extends TestCase {
         $this->validator = App::make('Rui\Collection\Validation\AlbumValidatorInterface');
     }
 
-
     public function test_validate_store_with_valid_data_should_succeed() {
         $actual = $this->validator->validateStore($this->storeInput);
 
-        assertThat(true, equalTo($actual));
+        assertThat($actual, equalTo(true));
     }
 
     public function test_validate_store_with_empty_name_should_fail() {

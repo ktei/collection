@@ -21,12 +21,12 @@ class UsersControllerTest extends TestCase {
     public function test_store_should_succeed() {
         $input = $this->signUpInput;
         $mock = Mockery::mock('Rui\Collection\Validation\UserValidatorInterface');
-        $mock->shouldReceive('validateStore')->once()->andReturn(true);
+        $mock->shouldReceive('validateStore')->once()->with($input)->andReturn(true);
         $this->app->instance('Rui\Collection\Validation\UserValidatorInterface', $mock);
         $mock = Mockery::mock('Rui\Collection\Repositories\UsersRepositoryInterface');
-        $mock->shouldReceive('save')->once()->andReturn(integerValue());
+        $mock->shouldReceive('save')->once()->with($input);
         $this->app->instance('Rui\Collection\Repositories\UsersRepositoryInterface', $mock);
-        Auth::shouldReceive('getDrivers')->once()->andReturn(arrayValue());
+        Auth::shouldReceive('getDrivers')->andReturn(arrayValue());
         Auth::shouldReceive('loginUsingId')->once();
 
         $this->action('POST', 'UsersController@store', array(), $input);
@@ -37,7 +37,7 @@ class UsersControllerTest extends TestCase {
 
     public function test_store_should_redirect_to_create_when_validation_fails() {
         $mock = Mockery::mock('Rui\Collection\Validation\UserValidatorInterface');
-        $mock->shouldReceive('validateStore')->once()->andReturn(
+        $mock->shouldReceive('validateStore')->once()->with(array())->andReturn(
             array('full_name' => 'error', 'email' => 'error', 'password' => 'error'));
         $this->app->instance('Rui\Collection\Validation\UserValidatorInterface', $mock);
         $mock = Mockery::mock('Rui\Collection\Repositories\UsersRepositoryInterface');

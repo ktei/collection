@@ -1,5 +1,4 @@
 <?php
-use Way\Tests\Factory;
 
 class AlbumsControllerTest extends TestCase {
 
@@ -19,8 +18,7 @@ class AlbumsControllerTest extends TestCase {
     }
 
     public function test_index_should_have_albums() {
-        $user = Factory::user();
-        $this->be($user);
+        $this->mockLogin();
         $mock = Mockery::mock('Rui\Collection\Repositories\AlbumsRepositoryInterface');
         $mock->shouldReceive('all')->once()->andReturn(array());
         $this->app->instance('Rui\Collection\Repositories\AlbumsRepositoryInterface', $mock);
@@ -34,27 +32,34 @@ class AlbumsControllerTest extends TestCase {
         assertThat($albums, is(arrayValue()));
     }
 
-    public function test_index_should_have_albums_order_by_updated_at_desc() {
-        $this->prepareDatabase();
-        $user = Factory::create('User');
-        $this->be($user);
-        Factory::create('Album', array('name' => 'a1', 'updated_at' => strtotime('-2 days')));
-        Factory::create('Album', array('name' => 'a2', 'updated_at' => strtotime('-1 days')));
+    public function test_index_should_paginate_albums() {
+        $this->mockLogin();
+        $mock = Mockery::mock('Rui\Collection\Repositories\AlbumsRepositoryInterface');
+        $mock->shouldReceive('all')->once()->with(array('page' => 2, 'limit' => 10))->andReturn(array());
+        $this->app->instance('Rui\Collection\Repositories\AlbumsRepositoryInterface', $mock);
 
-        $response = $this->action('GET', 'AlbumsController@index');
+        $response = $this->action('GET', 'AlbumsController@index', array(), array('page' => 2, 'limit' => 10));
 
         $this->assertResponseOk();
-        $this->assertViewhas('albums');
+        $this->assertViewHas('albums');
         $data = $response->original->getData();
         $albums = $data['albums'];
         assertThat($albums, is(arrayValue()));
-        assertThat('a2', equalTo($albums[0]->name));
-        assertThat('a1', equalTo($albums[1]->name));
     }
 
-    public function test_index_should_have_paginated_albums() {
-        $this->prepareDatabase();
-        // TODO: finish this test
+    public function test_dashboard_should_have_albums() {
+        $user = $this->mockLogin();
+        $mock = Mockery::mock('Rui\Collection\Repositories\AlbumsRepositoryInterface');
+        $mock->shouldReceive('all')->once()->with(array('user_id' => $user->id))->andReturn(array());
+        $this->app->instance('Rui\Collection\Repositories\AlbumsRepositoryInterface', $mock);
+
+        $response = $this->action('GET', 'AlbumsController@dashboard');
+
+        $this->assertResponseOk();
+        $this->assertViewHas('albums');
+        $data = $response->original->getData();
+        $albums = $data['albums'];
+        assertThat($albums, is(arrayValue()));
     }
 
     public function test_create_should_reject_without_login() {
@@ -72,19 +77,18 @@ class AlbumsControllerTest extends TestCase {
     }
 
     public function test_store_should_succeed() {
-        $user = Factory::user();
-        $this->be($user);
+        $user = $this->mockLogin();
         $input = $this->storeInput;
         $mock = Mockery::mock('Rui\Collection\Validation\AlbumValidatorInterface');
-        $mock->shouldReceive('validateStore')->once()->andReturn(true);
+        $mock->shouldReceive('validateStore')->once()->with($input)->andReturn(true);
         $this->app->instance('Rui\Collection\Validation\AlbumValidatorInterface', $mock);
         $mock = Mockery::mock('Rui\Collection\Repositories\AlbumsRepositoryInterface');
-        $mock->shouldReceive('save')->once()->andReturn(integerValue());
+        $mock->shouldReceive('save')->with(array_merge($input, array('user_id' => $user->id)))->once();
         $this->app->instance('Rui\Collection\Repositories\AlbumsRepositoryInterface', $mock);
 
         $this->action('POST', 'AlbumsController@store', array(), $input);
 
-        $this->assertRedirectedToAction('AlbumsController@index');
+        $this->assertRedirectedToAction('AlbumsController@dashboard');
     }
 
 }

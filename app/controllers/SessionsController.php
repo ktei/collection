@@ -9,7 +9,7 @@ class SessionsController extends BaseController {
     public function store() {
         $input = Input::all();
         if (Auth::attempt(['email' => $input['email'], 'password' => $input['password']])) {
-            return Redirect::intended('gallery');
+            return Redirect::intended('dashboard');
         }
         $this->flashError('Email/password combination is wrong.');
         return Redirect::action('SessionsController@create')

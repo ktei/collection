@@ -1,19 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" name="Default" comment="">
+    <list default="true" id="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" name="Default" comment="db migrations">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/tests/repositories/AlbumRepositoryTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/tests/repositories/UsersRepositoryTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/albums/create.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/albums/dashboard.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/start/helpers.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/config/settings.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Album.php" afterPath="$PROJECT_DIR$/app/models/Album.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/validation/AlbumValidator.php" afterPath="$PROJECT_DIR$/app/validation/AlbumValidator.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tests/validators/AlbumValidatorTest.php" afterPath="$PROJECT_DIR$/app/tests/validators/AlbumValidatorTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/AlbumsController.php" afterPath="$PROJECT_DIR$/app/controllers/AlbumsController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tests/controllers/AlbumsControllerTest.php" afterPath="$PROJECT_DIR$/app/tests/controllers/AlbumsControllerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/repositories/eloquent/AlbumsRepository.php" afterPath="$PROJECT_DIR$/app/repositories/eloquent/AlbumsRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/repositories/AlbumsRepositoryInterface.php" afterPath="$PROJECT_DIR$/app/repositories/AlbumsRepositoryInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/PagesController.php" afterPath="$PROJECT_DIR$/app/controllers/PagesController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tests/controllers/PagesControllerTest.php" afterPath="$PROJECT_DIR$/app/tests/controllers/PagesControllerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/SessionsController.php" afterPath="$PROJECT_DIR$/app/controllers/SessionsController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tests/controllers/SessionsControllerTest.php" afterPath="$PROJECT_DIR$/app/tests/controllers/SessionsControllerTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/User.php" afterPath="$PROJECT_DIR$/app/models/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/validation/UserValidator.php" afterPath="$PROJECT_DIR$/app/validation/UserValidator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tests/TestCase.php" afterPath="$PROJECT_DIR$/app/tests/TestCase.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tests/validators/UserValidatorTest.php" afterPath="$PROJECT_DIR$/app/tests/validators/UserValidatorTest.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tests/controllers/UsersControllerTest.php" afterPath="$PROJECT_DIR$/app/tests/controllers/UsersControllerTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/sessions/create.blade.php" afterPath="$PROJECT_DIR$/app/views/sessions/create.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/create.blade.php" afterPath="$PROJECT_DIR$/app/views/users/create.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/master.blade.php" afterPath="$PROJECT_DIR$/app/views/layouts/master.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/repositories/eloquent/UsersRepository.php" afterPath="$PROJECT_DIR$/app/repositories/eloquent/UsersRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_flash_message.blade.php" afterPath="$PROJECT_DIR$/app/views/layouts/_flash_message.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/app.css" afterPath="$PROJECT_DIR$/public/css/app.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/app.less" afterPath="$PROJECT_DIR$/public/css/app.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/start/global.php" afterPath="$PROJECT_DIR$/app/start/global.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes.php" afterPath="$PROJECT_DIR$/app/routes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="collection.iws" />
@@ -22,24 +35,24 @@
     <file path="/composer.json" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1382011434904" ignored="false" />
     <file path="/.gitignore" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381540734375" ignored="false" />
     <file path="/PagesController.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381643283971" ignored="false" />
-    <file path="/Dummy.txt" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1382144761565" ignored="false" />
+    <file path="/Dummy.txt" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1382243227662" ignored="false" />
     <file path="/master.blade.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1382145580661" ignored="false" />
     <file path="/main.coffee" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381496351181" ignored="false" />
     <file path="/a.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381540953842" ignored="false" />
     <file path="/a.coffee" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381493990798" ignored="false" />
     <file path="/a.less" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381493999112" ignored="false" />
-    <file path="/routes.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381748672573" ignored="false" />
+    <file path="/routes.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1382243282339" ignored="false" />
     <file path="/home.blade.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381497209425" ignored="false" />
     <file path="/main.js" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1382004529001" ignored="false" />
     <file path="/_guest.blade.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381500428928" ignored="false" />
-    <file path="/app.less" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381649846731" ignored="false" />
+    <file path="/app.less" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1382252550218" ignored="false" />
     <file path="/UsersController.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381919979009" ignored="false" />
     <file path="/SessionsController.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381649295803" ignored="false" />
-    <file path="/create.blade.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1382145543658" ignored="false" />
+    <file path="/create.blade.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1382252570191" ignored="false" />
     <file path="/mixins.less" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381498647421" ignored="false" />
     <file path="/2013_10_11_154132_init.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381650881820" ignored="false" />
     <file path="C:/startup/makeupsocial/app/database/migrations/2013_08_31_060942_init_db.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381539066234" ignored="false" />
-    <file path="/a.dummy" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1382096790605" ignored="false" />
+    <file path="/a.dummy" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1382253599156" ignored="false" />
     <file path="/2013_10_12_011037_add_cover_id_to_albums_table.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381540396519" ignored="false" />
     <file path="/RepositoryServiceProvider.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381631154195" ignored="false" />
     <file path="/UsersRepositoryInterface.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381636720822" ignored="false" />
@@ -47,18 +60,18 @@
     <file path="/User.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1382145052108" ignored="false" />
     <file path="/UserObserver.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1382002077583" ignored="false" />
     <file path="/ObserverServiceProvider.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381929562635" ignored="false" />
-    <file path="/TestCase.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381640061803" ignored="false" />
+    <file path="/TestCase.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1382253595558" ignored="false" />
     <file path="/UserTest.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381758751312" ignored="false" />
     <file path="/UserValidator.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1382145438882" ignored="false" />
-    <file path="/UsersControllerTest.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1382145286412" ignored="false" />
-    <file path="/UsersRepository.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381647834625" ignored="false" />
+    <file path="/UsersControllerTest.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1382256265296" ignored="false" />
+    <file path="/UsersRepository.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1382256340371" ignored="false" />
     <file path="/ValidationServiceProvider.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381637491334" ignored="false" />
     <file path="/app.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381637550670" ignored="false" />
-    <file path="/UserValidatorTest.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1382145404208" ignored="false" />
+    <file path="/UserValidatorTest.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1382254520503" ignored="false" />
     <file path="/Factory.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381758011063" ignored="false" />
-    <file path="/SessionsControllerTest.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1382145242251" ignored="false" />
-    <file path="/AlbumsController.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381653089670" ignored="false" />
-    <file path="/PagesControllerTest.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381650530826" ignored="false" />
+    <file path="/SessionsControllerTest.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1382253609360" ignored="false" />
+    <file path="/AlbumsController.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1382255085346" ignored="false" />
+    <file path="/PagesControllerTest.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1382253604605" ignored="false" />
     <file path="/_filed_error.blade.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381647310420" ignored="false" />
     <file path="C:/startup/tracksift/app/views/shared/_model_errors.blade.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381646272917" ignored="false" />
     <file path="/_model_errors.blade.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381646272221" ignored="false" />
@@ -66,13 +79,13 @@
     <file path="/index.blade.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1382096534681" ignored="false" />
     <file path="/*.txt" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381648154073" ignored="false" />
     <file path="/_user.blade.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381648333838" ignored="false" />
-    <file path="/AlbumsControllerTest.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1382145207414" ignored="false" />
-    <file path="/AlbumsRepositoryInterface.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381658792502" ignored="false" />
-    <file path="/AlbumsRepository.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381664051578" ignored="false" />
+    <file path="/AlbumsControllerTest.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1382256169210" ignored="false" />
+    <file path="/AlbumsRepositoryInterface.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1382254075996" ignored="false" />
+    <file path="/AlbumsRepository.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1382255096033" ignored="false" />
     <file path="/AlbumValidatorInterface.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381652938517" ignored="false" />
     <file path="/AlbumValidator.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1382145424788" ignored="false" />
-    <file path="/AlbumValidatorTest.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1382145354373" ignored="false" />
-    <file path="/Album.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1382145030942" ignored="false" />
+    <file path="/AlbumValidatorTest.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1382254500299" ignored="false" />
+    <file path="/Album.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1382241740756" ignored="false" />
     <file path="$PROJECT_DIR$/../ktei/php_time_sugar/src/TimeSugar.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381660424939" ignored="false" />
     <file path="/TimeSugar.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381660524493" ignored="false" />
     <file path="$PROJECT_DIR$/../ktei/php_time_sugar/src/Sugar.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381660947377" ignored="false" />
@@ -176,7 +189,7 @@
     <file path="/ImageHelper.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381830730587" ignored="false" />
     <file path="/definitions.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381831720541" ignored="false" />
     <file path="C:/startup/tracksift/app/start/helpers.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381832296278" ignored="false" />
-    <file path="/helpers.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381832252193" ignored="false" />
+    <file path="/helpers.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1382254700359" ignored="false" />
     <file path="C:/startup/tracksift/app/views/tracks/admin_view.blade.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381831520001" ignored="false" />
     <file path="C:/startup/tracksift/app/views/users/admin_view.blade.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381831525902" ignored="false" />
     <file path="C:/startup/tracksift/app/tests/controllers/SessionsControllerTest.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1381832182777" ignored="false" />
@@ -231,6 +244,9 @@
     <file path="C:/startup/tracksift/app/views/layouts/_header.blade.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1382096818608" ignored="false" />
     <file path="/_header.blade.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1382096818608" ignored="false" />
     <file path="C:/startup/tracksift/app/storage/views/b22954787de71ccbfbf6d0469b362837" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1382096900720" ignored="false" />
+    <file path="/dashboard.blade.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1382253106971" ignored="false" />
+    <file path="/AlbumRepositoryTest.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1382255410526" ignored="false" />
+    <file path="/UsersRepositoryTest.php" changelist="06ba1ca4-194b-4edd-ae1d-0eed68a546ac" time="1382255130688" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -250,91 +266,95 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_field_error.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/shared/_field_error.blade.php">
+      <file leaf-file-name="UsersControllerTest.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/tests/controllers/UsersControllerTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="29" column="51" selection-start="1229" selection-end="1229" vertical-scroll-proportion="-6.923077">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/sessions/create.blade.php">
+      <file leaf-file-name="UsersRepositoryTest.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/tests/repositories/UsersRepositoryTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="27" selection-end="27" vertical-scroll-proportion="-0.34615386">
+            <state line="5" column="0" selection-start="82" selection-end="82" vertical-scroll-proportion="-3.3333333">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/pages/home.blade.php">
+      <file leaf-file-name="AlbumValidatorTest.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/tests/validators/AlbumValidatorTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="19" selection-start="47" selection-end="47" vertical-scroll-proportion="-1.3333334">
+            <state line="13" column="0" selection-start="403" selection-end="403" vertical-scroll-proportion="1.9038461">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_flash_message.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/_flash_message.blade.php">
+      <file leaf-file-name="AlbumRepositoryTest.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/tests/repositories/AlbumRepositoryTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="41" column="24" selection-start="1414" selection-end="1414" vertical-scroll-proportion="-14.192307">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reminder.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/emails/auth/reminder.blade.php">
+      <file leaf-file-name="AlbumsControllerTest.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/tests/controllers/AlbumsControllerTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="31" selection-start="111" selection-end="111" vertical-scroll-proportion="-4.0">
+            <state line="83" column="6" selection-start="3236" selection-end="3236" vertical-scroll-proportion="-55.333332">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/albums/index.blade.php">
+      <file leaf-file-name="AlbumsRepository.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/repositories/eloquent/AlbumsRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="5" selection-start="69" selection-end="69" vertical-scroll-proportion="-2.6666667">
+            <state line="14" column="22" selection-start="412" selection-end="412" vertical-scroll-proportion="-9.333333">
+              <folding>
+                <element signature="e#57#115#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UsersRepository.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/repositories/eloquent/UsersRepository.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="29" selection-start="251" selection-end="251" vertical-scroll-proportion="-6.6666665">
+              <folding>
+                <element signature="e#56#113#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/User.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="0" selection-start="402" selection-end="402" vertical-scroll-proportion="-13.333333">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="autoload.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bootstrap/autoload.php">
+      <file leaf-file-name="AlbumsController.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/AlbumsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="33" column="100" selection-start="1212" selection-end="1212" vertical-scroll-proportion="0.6377709">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="paths.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bootstrap/paths.php">
+      <file leaf-file-name="helpers.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/start/helpers.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="start.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bootstrap/start.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="2" selection-start="1931" selection-end="1931" vertical-scroll-proportion="0.498452">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="master.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/master.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="83" selection-start="1355" selection-end="1355" vertical-scroll-proportion="-9.519231">
+            <state line="9" column="1" selection-start="235" selection-end="235" vertical-scroll-proportion="-6.0">
               <folding />
             </state>
           </provider>
@@ -358,22 +378,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/vendor/way/laravel-test-helpers/src/Way/Tests/Factory.php" />
-        <option value="$PROJECT_DIR$/app/repositories/eloquent/AlbumsRepository.php" />
         <option value="$PROJECT_DIR$/app/tests/TestCase.php" />
-        <option value="$PROJECT_DIR$/app/models/Album.php" />
-        <option value="$PROJECT_DIR$/app/models/User.php" />
-        <option value="$PROJECT_DIR$/app/tests/controllers/AlbumsControllerTest.php" />
         <option value="$PROJECT_DIR$/app/tests/controllers/SessionsControllerTest.php" />
-        <option value="$PROJECT_DIR$/app/tests/controllers/UsersControllerTest.php" />
+        <option value="$PROJECT_DIR$/app/tests/controllers/PagesControllerTest.php" />
+        <option value="$PROJECT_DIR$/app/repositories/AlbumsRepositoryInterface.php" />
         <option value="$PROJECT_DIR$/app/tests/validators/AlbumValidatorTest.php" />
         <option value="$PROJECT_DIR$/app/tests/validators/UserValidatorTest.php" />
-        <option value="$PROJECT_DIR$/app/validation/AlbumValidator.php" />
-        <option value="$PROJECT_DIR$/app/validation/UserValidator.php" />
-        <option value="$PROJECT_DIR$/app/views/users/create.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/sessions/create.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/layouts/master.blade.php" />
+        <option value="$PROJECT_DIR$/app/start/utilities.php" />
+        <option value="$PROJECT_DIR$/app/start/global.php" />
+        <option value="$PROJECT_DIR$/app/start/helpers.php" />
+        <option value="$PROJECT_DIR$/app/controllers/AlbumsController.php" />
+        <option value="$PROJECT_DIR$/app/tests/repositories/UsersRepositoryTest.php" />
+        <option value="$PROJECT_DIR$/app/repositories/eloquent/AlbumsRepository.php" />
+        <option value="$PROJECT_DIR$/app/tests/repositories/AlbumRepositoryTest.php" />
+        <option value="$PROJECT_DIR$/app/tests/controllers/AlbumsControllerTest.php" />
+        <option value="$PROJECT_DIR$/app/tests/controllers/UsersControllerTest.php" />
+        <option value="$PROJECT_DIR$/app/repositories/eloquent/UsersRepository.php" />
       </list>
     </option>
   </component>
@@ -611,6 +631,10 @@
               <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -674,24 +698,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="validation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="collection" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="collection" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="tests" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -736,7 +742,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
+              <option name="myItemId" value="repositories" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -964,8 +970,8 @@
     <property name="options.lastSelected" value="preferences.sourceCode.PHP" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../ktei/php_time_sugar" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -1019,9 +1025,10 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24066924" sideWeight="0.67083335" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25032175" sideWeight="0.67083335" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286908" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1030,7 +1037,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1097,118 +1103,122 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/validation/AlbumValidator.php">
+    <entry file="file://$PROJECT_DIR$/app/tests/TestCase.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="9" selection-start="336" selection-end="336" vertical-scroll-proportion="-4.1538463">
+        <state line="3" column="0" selection-start="91" selection-end="113" vertical-scroll-proportion="-2.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/validation/AlbumValidatorInterface.php">
+    <entry file="file://$PROJECT_DIR$/app/repositories/AlbumsRepositoryInterface.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="8" column="0" selection-start="131" selection-end="131" vertical-scroll-proportion="-5.3333335">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/validation/UserValidator.php">
+    <entry file="file://$PROJECT_DIR$/app/tests/controllers/PagesControllerTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="9" selection-start="436" selection-end="436" vertical-scroll-proportion="-3.8076923">
+        <state line="1" column="0" selection-start="6" selection-end="6" vertical-scroll-proportion="-0.6666667">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/validation/ValidationServiceProvider.php">
+    <entry file="file://$PROJECT_DIR$/app/tests/controllers/SessionsControllerTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="33" column="21" selection-start="956" selection-end="962" vertical-scroll-proportion="-10.942307">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/validation/UserValidatorInterface.php">
+    <entry file="file://$PROJECT_DIR$/app/tests/validators/UserValidatorTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="21" column="46" selection-start="718" selection-end="718" vertical-scroll-proportion="24.074074">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/create.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/start/global.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="65" selection-start="1067" selection-end="1067" vertical-scroll-proportion="-6.923077">
+        <state line="77" column="32" selection-start="2443" selection-end="2443" vertical-scroll-proportion="-15.259259">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/shared/_field_error.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/start/helpers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="9" column="1" selection-start="235" selection-end="235" vertical-scroll-proportion="-6.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/sessions/create.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/tests/validators/AlbumValidatorTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="27" selection-end="27" vertical-scroll-proportion="-0.34615386">
+        <state line="13" column="0" selection-start="403" selection-end="403" vertical-scroll-proportion="1.9038461">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pages/home.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/tests/repositories/AlbumRepositoryTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="19" selection-start="47" selection-end="47" vertical-scroll-proportion="-1.3333334">
+        <state line="41" column="24" selection-start="1414" selection-end="1414" vertical-scroll-proportion="-14.192307">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/master.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/tests/controllers/AlbumsControllerTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="83" selection-start="1355" selection-end="1355" vertical-scroll-proportion="-9.519231">
+        <state line="83" column="6" selection-start="3236" selection-end="3236" vertical-scroll-proportion="-55.333332">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/_flash_message.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/tests/controllers/UsersControllerTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="29" column="51" selection-start="1229" selection-end="1229" vertical-scroll-proportion="-6.923077">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/emails/auth/reminder.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/repositories/eloquent/AlbumsRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="31" selection-start="111" selection-end="111" vertical-scroll-proportion="-4.0">
+        <state line="14" column="22" selection-start="412" selection-end="412" vertical-scroll-proportion="-9.333333">
+          <folding>
+            <element signature="e#57#115#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="0" selection-start="402" selection-end="402" vertical-scroll-proportion="-13.333333">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/albums/index.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/repositories/eloquent/UsersRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="5" selection-start="69" selection-end="69" vertical-scroll-proportion="-2.6666667">
+        <state line="10" column="29" selection-start="251" selection-end="251" vertical-scroll-proportion="-6.6666665">
+          <folding>
+            <element signature="e#56#113#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/tests/repositories/UsersRepositoryTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="82" selection-end="82" vertical-scroll-proportion="-3.3333333">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bootstrap/autoload.php">
+    <entry file="file://$PROJECT_DIR$/app/controllers/AlbumsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bootstrap/paths.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bootstrap/start.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="2" selection-start="1931" selection-end="1931" vertical-scroll-proportion="0.498452">
+        <state line="33" column="100" selection-start="1212" selection-end="1212" vertical-scroll-proportion="0.6377709">
           <folding />
         </state>
       </provider>

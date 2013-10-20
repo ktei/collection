@@ -8,6 +8,7 @@ Route::get('/signup', 'UsersController@create');
 Route::post('/signup', 'UsersController@store');
 
 Route::get('/gallery', 'AlbumsController@index');
+Route::get('/dashboard', 'AlbumsController@dashboard');
 Route::get('/albums/create', 'AlbumsController@create');
 Route::post('/albums/create', 'AlbumsController@store');
 

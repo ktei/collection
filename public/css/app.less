@@ -5,6 +5,10 @@ body {
   padding-top: 70px;
 }
 
+.container {
+  max-width: 768px;
+}
+
 form {
   .caption {
     font-size: 2em;
@@ -14,6 +18,9 @@ form {
   }
   &.signup {
     .bordered-form(450px);
+  }
+  &.create-album {
+    .bordered-form(100%);
   }
   &.login {
     .bordered-form(350px);
@@ -28,4 +35,74 @@ span {
     background-color:@brand-danger;
     .border-radius(4px);
   }
+}
+
+.album {
+  .make-xs-column(12);
+  .make-sm-column(4);
+  .thumbnail {
+    margin:auto;
+    margin-bottom:10px;
+    max-width: 250px;
+  }
+  .caption {
+    height: 50px;
+    overflow:hidden;
+  }
+}
+
+.photo {
+  .make-xs-column(12);
+  .make-sm-column(4);
+  .thumbnail {
+    margin:auto;
+    margin-bottom:10px;
+    max-width: 200px;
+    @media (min-width: @screen-sm) {
+      margin:0;
+      margin-bottom:10px;
+      max-width: 200px;
+    }
+  }
+}
+
+.album-entry {
+  .list-group-item();
+  padding: 6px 6px 6px 120px;
+  min-height: 106px;
+  .head {
+    width:100%;
+    display: block;
+    &:before, &:after {
+      content: " ";
+      display: table;
+    }
+    &:after {
+      clear: both;
+    }
+    img.cover {
+      border-radius: @border-radius-small;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      margin:2px;
+      width:100px;
+
+    }
+    h4 {
+      float: left;
+      font-size: 18px;
+      margin-bottom: 2px;
+      margin-top: 6px;
+    }
+  }
+  .description {
+    .list-group-item-text();
+    .hidden-xs();
+  }
+}
+
+textarea {
+  resize:vertical;
 }

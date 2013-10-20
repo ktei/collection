@@ -19,7 +19,7 @@ class UserValidatorTest extends TestCase {
     public function test_validate_store_with_valid_data_should_succeed() {
         $validation = $this->validator->validateStore($this->storeInput);
 
-        assertThat(true, equalTo($validation));
+        assertThat($validation, equalTo(true));
     }
 
     public function test_validate_store_with_full_name_too_long_should_fail() {

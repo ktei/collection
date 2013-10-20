@@ -12,4 +12,8 @@ class Album extends Eloquent {
     public function user() {
         return $this->belongsTo('User');
     }
+
+    public function scopeOwnedBy($query, $userId) {
+        return $query->where('user_id', '=', $userId);
+    }
 }
