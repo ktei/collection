@@ -2,6 +2,8 @@
 
 @section('content')
 
+<a class="btn btn-block btn-primary" href="{{URL::action('AlbumsController@create')}}">Create album</a>
+<br>
 @if (count($albums) > 0)
     <div class="list-group">
         @foreach ($albums as $album)

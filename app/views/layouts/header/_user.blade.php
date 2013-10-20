@@ -9,6 +9,14 @@
             <a class="navbar-brand" href="{{URL::action('PagesController@home')}}">Collection</a>
         </div>
         <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="{{URL::action('AlbumsController@index')}}">Gallery</a>
+                </li>
+                <li>
+                    <a href="{{URL::action('AlbumsController@dashboard')}}">Dashboard</a>
+                </li>
+            </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li>
                     <a href="{{URL::action('SessionsController@destroy')}}">Log out</a>
