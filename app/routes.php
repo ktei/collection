@@ -11,6 +11,7 @@ Route::get('/gallery', 'AlbumsController@index');
 Route::get('/dashboard', 'AlbumsController@dashboard');
 Route::get('/albums/create', 'AlbumsController@create');
 Route::post('/albums/create', 'AlbumsController@store');
+Route::get('/dashboard/album/{id}', 'AlbumsController@manage')->where('id', '[0-9]+');
 
 Route::get('/', 'PagesController@home');
 

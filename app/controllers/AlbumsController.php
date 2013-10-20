@@ -1,13 +1,19 @@
 <?php
 
 use Rui\Collection\Repositories\AlbumsRepositoryInterface as AlbumsRepository;
+use Rui\Collection\Repositories\PhotosRepositoryInterface as PhotosRepository;
 use Rui\Collection\Validation\AlbumValidatorInterface as AlbumValidator;
 
 class AlbumsController extends BaseController {
 
-    public function __construct(AlbumsRepository $albumsRepository, AlbumValidator $albumValidator) {
+    public function __construct(
+        AlbumsRepository $albumsRepository,
+        PhotosRepository $photosRepository,
+        AlbumValidator $albumValidator) {
+
         $this->beforeFilter('auth');
         $this->albumsRepository = $albumsRepository;
+        $this->photosRepository = $photosRepository;
         $this->albumValidator = $albumValidator;
     }
 
@@ -21,6 +27,12 @@ class AlbumsController extends BaseController {
         $params = array('user_id' => Auth::user()->id);
         $albums = $this->albumsRepository->all($params);
         return View::make('albums.dashboard', compact('albums'));
+    }
+
+    public function manage($id) {
+        $album = $this->albumsRepository->find($id);
+        $photos = $this->photosRepository->findByAlbum($id);
+        return View::make('albums.manage', compact('album', 'photos'));
     }
 
     public function create() {

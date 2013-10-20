@@ -2,7 +2,7 @@
 
 use Way\Tests\Factory;
 
-class AlbumRepositoryTest extends TestCase {
+class AlbumsRepositoryTest extends TestCase {
 
     public function setUp() {
         parent::setUp();
@@ -26,7 +26,7 @@ class AlbumRepositoryTest extends TestCase {
             Factory::create('Album');
         }
 
-        $albums = $this->albumsRepository->all(array('page' => 1, 'limit' => 2));
+        $albums = $this->albumsRepository->all(array('page' => 2, 'limit' => 2));
 
         assertThat(count($albums), equalTo(2));
     }
@@ -62,5 +62,13 @@ class AlbumRepositoryTest extends TestCase {
         $actual = Album::findOrFail($album->id);
         assertThat($actual->name, equalTo('foo'));
         assertThat($actual->description, equalTo('bar'));
+    }
+
+    public function test_find_album() {
+        $album = Factory::create('Album');
+
+        $actual = $this->albumsRepository->find($album->id);
+
+        assertThat($actual->name, equalTo($album->name));
     }
 }

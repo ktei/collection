@@ -5,5 +5,7 @@ namespace Rui\Collection\Repositories;
 
 interface UsersRepositoryInterface {
 
-    public function create($params);
+    public function create(array $params);
+
+    public function update(array $params);
 }

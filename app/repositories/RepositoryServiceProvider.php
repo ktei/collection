@@ -13,6 +13,11 @@ class RepositoryServiceProvider extends ServiceProvider {
             'Rui\Collection\Repositories\AlbumsRepositoryInterface',
             'Rui\Collection\Repositories\Eloquent\AlbumsRepository'
         );
+
+        $this->app->bind(
+            'Rui\Collection\Repositories\PhotosRepositoryInterface',
+            'Rui\Collection\Repositories\Eloquent\PhotosRepository'
+        );
     }
 
 }

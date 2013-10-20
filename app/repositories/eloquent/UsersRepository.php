@@ -7,11 +7,11 @@ use \User;
 
 class UsersRepository implements UsersRepositoryInterface {
 
-    public function create($params) {
+    public function create(array $params) {
         User::create($params);
     }
 
-    public function update($params) {
+    public function update(array $params) {
         $user = User::findOrFail($params['id']);
         if (array_key_exists('email', $params)) {
             $user->email = $params['email'];

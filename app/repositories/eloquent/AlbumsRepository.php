@@ -9,7 +9,7 @@ use \Album;
 
 class AlbumsRepository implements AlbumsRepositoryInterface {
 
-    public function all($params = array()) {
+    public function all(array $params = array()) {
         $results = array();
         $limit = array_try_get('limit', $params, Config::get('settings.page_limit'));
         $query = null;
@@ -24,13 +24,13 @@ class AlbumsRepository implements AlbumsRepositoryInterface {
         return $results;
     }
 
-    public function create($params) {
+    public function create(array $params) {
         $album = new Album($params);
         $album->user_id = $params['user_id'];
         $album->save();
     }
 
-    public function update($params) {
+    public function update(array $params) {
         $album = Album::findOrFail($params['id']);
         if (array_key_exists('name', $params)) {
             $album->name = $params['name'];
@@ -40,4 +40,9 @@ class AlbumsRepository implements AlbumsRepositoryInterface {
         }
         $album->save();
     }
+
+    public function find($id) {
+        return Album::findOrFail($id);
+    }
+
 }

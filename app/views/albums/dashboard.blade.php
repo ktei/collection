@@ -7,7 +7,7 @@
 @if (count($albums) > 0)
     <div class="list-group">
         @foreach ($albums as $album)
-        <a href="#" class="album-entry">
+        <a href="{{URL::action('AlbumsController@manage', array('id' => $album->id))}}" class="album-entry">
             <div class="head">
                 <img class="cover" src="http://placehold.it/100x100">
                 <h4>{{$album->name}}</h4>
