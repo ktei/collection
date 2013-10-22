@@ -89,7 +89,7 @@ class AlbumsControllerTest extends TestCase {
     public function test_browse_should_display_photos() {
         $this->mockLogin();
         $mock = Mockery::mock('Rui\Collection\Repositories\AlbumsRepositoryInterface');
-        $mock->shouldReceive('findOrFail')->once()->with(1)->andReturn(Factory::make('Album'));
+        $mock->shouldReceive('findOrFail')->once()->with(1)->andReturn(Factory::make('Album', array('id' => 1)));
         $this->app->instance('Rui\Collection\Repositories\AlbumsRepositoryInterface', $mock);
         $mock = Mockery::mock('Rui\Collection\Repositories\PhotosRepositoryInterface');
         $mock->shouldReceive('findByAlbum')->once()->with(1)->andReturn(array());
