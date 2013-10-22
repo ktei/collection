@@ -20,4 +20,8 @@ class PhotosRepository implements PhotosRepositoryInterface {
         return $results;
     }
 
+    public function create(array $params) {
+
+    }
+
 }

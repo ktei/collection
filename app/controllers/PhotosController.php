@@ -14,12 +14,16 @@ class PhotosController extends BaseController {
         $this->albumsRepository = $albumsRepository;
     }
 
-    public function create($id) {
-        $album = $this->albumsRepository->findOrFail($id);
+    public function create($albumId) {
+        $album = $this->albumsRepository->findOrFail($albumId);
         $userId = Auth::user()->id;
         if ($userId != $album->user_id) {
             throwException(new Exception("Not authorized request to album {$album->id}", ERR_UNAUTHORIZED));
         }
         return View::make('albums.manage.upload', compact('album'));
+    }
+
+    public function store() {
+
     }
 }

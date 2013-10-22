@@ -27,4 +27,10 @@ class PhotosControllerTest extends TestCase {
         $this->assertViewHas('album');
     }
 
+    public function test_store_should_reject_without_login() {
+        $this->action('POST', 'PhotosController@store', array());
+
+        $this->assertRedirectedToAction('SessionsController@create');
+    }
+
 }

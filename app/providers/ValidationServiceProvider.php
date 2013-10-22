@@ -17,5 +17,10 @@ class ValidationServiceProvider extends ServiceProvider {
             'Rui\Collection\Validation\AlbumValidatorInterface',
             'Rui\Collection\Validation\AlbumValidator'
         );
+
+        $this->app->bind(
+            'Rui\Collection\Validation\PhotoValidatorInterface',
+            'Rui\Collection\Validation\PhotoValidator'
+        );
     }
 }
