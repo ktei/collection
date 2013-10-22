@@ -41,7 +41,7 @@ class AlbumsRepository implements AlbumsRepositoryInterface {
         $album->save();
     }
 
-    public function find($id) {
+    public function findOrFail($id) {
         return Album::findOrFail($id);
     }
 

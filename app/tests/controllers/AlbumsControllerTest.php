@@ -1,6 +1,8 @@
 <?php
 
 use Way\Tests\Factory;
+use \Illuminate\Database\Eloquent\ModelNotFoundException;
+
 
 class AlbumsControllerTest extends TestCase {
 
@@ -84,16 +86,16 @@ class AlbumsControllerTest extends TestCase {
         $this->assertRedirectedToAction('AlbumsController@dashboard');
     }
 
-    public function test_manage_should_display_photos() {
+    public function test_browse_should_display_photos() {
         $this->mockLogin();
         $mock = Mockery::mock('Rui\Collection\Repositories\AlbumsRepositoryInterface');
-        $mock->shouldReceive('find')->once()->with(1)->andReturn(Factory::make('Album'));
+        $mock->shouldReceive('findOrFail')->once()->with(1)->andReturn(Factory::make('Album'));
         $this->app->instance('Rui\Collection\Repositories\AlbumsRepositoryInterface', $mock);
         $mock = Mockery::mock('Rui\Collection\Repositories\PhotosRepositoryInterface');
         $mock->shouldReceive('findByAlbum')->once()->with(1)->andReturn(array());
         $this->app->instance('Rui\Collection\Repositories\PhotosRepositoryInterface', $mock);
 
-        $this->action('GET', 'AlbumsController@manage', array('id' => 1));
+        $this->action('GET', 'AlbumsController@browse', array('id' => 1));
 
         $this->assertResponseOk();
         $this->assertViewHas('album');

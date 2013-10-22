@@ -11,6 +11,7 @@
     <meta name="robots" content="collection" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {{HTML::style('css/app.css')}}
+    {{HTML::style('packages/font-awesome/css/font-awesome.min.css')}}
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>

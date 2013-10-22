@@ -33,14 +33,14 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase {
         Artisan::call('migrate');
     }
 
-    protected function dbLogin() {
-        $user = Factory::create('User');
+    protected function dbLogin(array $userData = array()) {
+        $user = Factory::create('User', $userData);
         $this->be($user);
         return $user;
     }
 
-    protected function mockLogin() {
-        $user = Factory::make('User');
+    protected function mockLogin(array $userData = array()) {
+        $user = Factory::make('User', $userData);
         $this->be($user);
         return $user;
     }

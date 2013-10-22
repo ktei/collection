@@ -8,4 +8,12 @@ class PagesController extends BaseController {
         }
         return View::make('pages.home');
     }
+
+    public function e401() {
+        return View::make('pages.errors.401');
+    }
+
+    public function e404() {
+        return View::make('pages.errors.404');
+    }
 }

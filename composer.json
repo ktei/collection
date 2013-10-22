@@ -17,6 +17,7 @@
 			"app/commands",
 			"app/controllers",
 			"app/models",
+            "app/providers",
             "app/observers",
             "app/repositories",
             "app/repositories/eloquent",

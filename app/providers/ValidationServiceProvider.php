@@ -1,6 +1,6 @@
 <?php
 
-namespace Rui\Collection\Validation;
+namespace Rui\Collection\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

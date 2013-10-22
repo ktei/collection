@@ -114,9 +114,10 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
-        'Rui\Collection\Repositories\RepositoryServiceProvider',
-        'Rui\Collection\Observers\ObserverServiceProvider',
-        'Rui\Collection\Validation\ValidationServiceProvider'
+        'Rui\Collection\Providers\AppErrorsHandlingProvider',
+        'Rui\Collection\Providers\RepositoryServiceProvider',
+        'Rui\Collection\Providers\ObserverServiceProvider',
+        'Rui\Collection\Providers\ValidationServiceProvider'
 	),
 
 	/*

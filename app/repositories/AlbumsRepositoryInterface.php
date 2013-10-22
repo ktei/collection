@@ -11,5 +11,5 @@ interface AlbumsRepositoryInterface {
 
     public function update(array $input);
 
-    public function find($id);
+    public function findOrFail($id);
 }

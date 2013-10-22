@@ -64,11 +64,12 @@ class AlbumsRepositoryTest extends TestCase {
         assertThat($actual->description, equalTo('bar'));
     }
 
-    public function test_find_album() {
+    public function test_findOrFail_album() {
         $album = Factory::create('Album');
 
-        $actual = $this->albumsRepository->find($album->id);
+        $actual = $this->albumsRepository->findOrFail($album->id);
 
         assertThat($actual->name, equalTo($album->name));
     }
+
 }

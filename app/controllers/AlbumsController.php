@@ -29,10 +29,10 @@ class AlbumsController extends BaseController {
         return View::make('albums.dashboard', compact('albums'));
     }
 
-    public function manage($id) {
-        $album = $this->albumsRepository->find($id);
+    public function browse($id) {
+        $album = $this->albumsRepository->findOrFail($id);
         $photos = $this->photosRepository->findByAlbum($id);
-        return View::make('albums.manage', compact('album', 'photos'));
+        return View::make('albums.manage.browse', compact('album', 'photos'));
     }
 
     public function create() {

@@ -17,4 +17,16 @@ class PagesControllerTest extends TestCase {
         $this->assertRedirectedToAction('AlbumsController@dashboard');
     }
 
+    public function test_e404_should_succeed() {
+        $this->action('GET', 'PagesController@e404');
+
+        $this->assertResponseOk();
+    }
+
+    public function test_e401_should_succeed() {
+        $this->action('GET', 'PagesController@e401');
+
+        $this->assertResponseOk();
+    }
+
 }

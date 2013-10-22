@@ -11,7 +11,11 @@ Route::get('/gallery', 'AlbumsController@index');
 Route::get('/dashboard', 'AlbumsController@dashboard');
 Route::get('/albums/create', 'AlbumsController@create');
 Route::post('/albums/create', 'AlbumsController@store');
-Route::get('/dashboard/album/{id}', 'AlbumsController@manage')->where('id', '[0-9]+');
+Route::get('/dashboard/album/{id}', 'AlbumsController@browse')->where('id', '[0-9]+');
+Route::get('/dashboard/album/{id}/upload', 'PhotosController@create')->where('id', '[0-9]+');
 
 Route::get('/', 'PagesController@home');
+
+Route::get('/e401', 'PagesController@e401');
+Route::get('/e404', 'PagesController@e404');
 

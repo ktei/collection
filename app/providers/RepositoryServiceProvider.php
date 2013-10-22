@@ -1,4 +1,4 @@
-<?php namespace Rui\Collection\Repositories;
+<?php namespace Rui\Collection\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
