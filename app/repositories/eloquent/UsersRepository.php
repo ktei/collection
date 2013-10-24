@@ -11,7 +11,7 @@ class UsersRepository extends BaseRepository implements UsersRepositoryInterface
 
     public function create(array $params) {
         $model = $this->createModel('User', $params);
-        return $model;
+        return $model->id;
     }
 
     public function update(array $params) {

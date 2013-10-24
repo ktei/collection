@@ -65,6 +65,6 @@ App::down(function()
 
 require app_path().'/filters.php';
 
-require app_path().'/start/error_codes.php';
+require app_path().'/start/def.php';
 
 require app_path().'/start/helpers.php';

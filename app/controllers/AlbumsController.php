@@ -40,7 +40,7 @@ class AlbumsController extends BaseController {
     }
 
     public function store() {
-        $input = Input::all();
+        $input = array_only(Input::all(), array('name', 'description'));
         $validation = $this->albumValidator->validateStore($input);
         if ($validation === true) {
             $this->albumsRepository->create(array_merge($input, array('user_id' => Auth::user()->id)));

@@ -16,7 +16,7 @@ class UsersController extends BaseController {
     }
 
     public function store() {
-        $input = Input::all();
+        $input = array_only(Input::all(), array('email', 'full_name', 'password'));
         $validation = $this->userValidator->validateStore($input);
         if ($validation === true) {
             $userId = $this->usersRepository->create($input);
