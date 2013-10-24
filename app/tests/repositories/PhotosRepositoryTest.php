@@ -32,4 +32,13 @@ class PhotosRepositoryTest extends TestCase {
 
         assertThat(count($photos), equalTo(2));
     }
+
+    public function test_create_photo() {
+        $album = Factory::create('Album');
+        $params = array('album_id' => $album->id);
+
+        $photoId = $this->photosRepository->create($params);
+
+        assertThat(Photo::firstOrFail()->id, equalTo($photoId));
+    }
 }

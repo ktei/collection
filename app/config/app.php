@@ -117,7 +117,8 @@ return array(
         'Rui\Collection\Providers\AppErrorsHandlingProvider',
         'Rui\Collection\Providers\RepositoryServiceProvider',
         'Rui\Collection\Providers\ObserverServiceProvider',
-        'Rui\Collection\Providers\ValidationServiceProvider'
+        'Rui\Collection\Providers\ValidationServiceProvider',
+        'Rui\Collection\Providers\ImageServiceProvider'
 	),
 
 	/*
@@ -182,7 +183,7 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
-
+        'Img'             => 'Rui\Collection\Facades\ImageProcessor'
 	),
 
 );

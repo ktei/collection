@@ -7,7 +7,9 @@ use Rui\Collection\Repositories\AlbumsRepositoryInterface;
 use Illuminate\Support\Facades\Config;
 use \Album;
 
-class AlbumsRepository implements AlbumsRepositoryInterface {
+class AlbumsRepository extends BaseRepository implements AlbumsRepositoryInterface {
+
+    protected $model = 'Album';
 
     public function all(array $params = array()) {
         $results = array();
@@ -25,24 +27,12 @@ class AlbumsRepository implements AlbumsRepositoryInterface {
     }
 
     public function create(array $params) {
-        $album = new Album($params);
-        $album->user_id = $params['user_id'];
-        $album->save();
+        $model = $this->createModel('Album', $params);
+        return $model->id;
     }
 
     public function update(array $params) {
-        $album = Album::findOrFail($params['id']);
-        if (array_key_exists('name', $params)) {
-            $album->name = $params['name'];
-        }
-        if (array_key_exists('description', $params)) {
-            $album->description = $params['description'];
-        }
-        $album->save();
-    }
-
-    public function findOrFail($id) {
-        return Album::findOrFail($id);
+        $this->updateModel('Album', $params);
     }
 
 }

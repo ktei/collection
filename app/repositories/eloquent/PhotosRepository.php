@@ -8,7 +8,9 @@ use Rui\Collection\Repositories\PhotosRepositoryInterface;
 use Illuminate\Support\Facades\Config;
 use \Photo;
 
-class PhotosRepository implements PhotosRepositoryInterface {
+class PhotosRepository extends BaseRepository implements PhotosRepositoryInterface {
+
+    protected $model = 'Photo';
 
     public function findByAlbum($albumId, array $params = array()) {
         $results = array();
@@ -21,7 +23,8 @@ class PhotosRepository implements PhotosRepositoryInterface {
     }
 
     public function create(array $params) {
-
+        $model = $this->createModel('Photo', $params);
+        return $model->id;
     }
 
 }

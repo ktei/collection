@@ -51,7 +51,7 @@ class Init extends Migration {
             $table->increments('id');
             $table->integer('user_id')->unsigned();
             $table->string('name');
-            $table->string('description');
+            $table->string('description')->nullable();
             $table->integer('photos_count')->default(0);;
 
             $table->timestamps();
@@ -65,7 +65,7 @@ class Init extends Migration {
         Schema::create('photos', function($table) {
             $table->increments('id');
             $table->integer('album_id')->unsigned();
-            $table->text('description');
+            $table->text('description')->nullable();
             $table->integer('comments_count')->default(0);;
 
             $table->timestamps();

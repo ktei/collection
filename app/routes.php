@@ -13,7 +13,7 @@ Route::get('/albums/create', 'AlbumsController@create');
 Route::post('/albums/create', 'AlbumsController@store');
 Route::get('/dashboard/album/{id}', 'AlbumsController@browse')->where('id', '[0-9]+');
 Route::get('/dashboard/album/{id}/upload', 'PhotosController@create')->where('id', '[0-9]+');
-Route::post('/photos/upload', 'PhotosController@store');
+Route::post('/dashboard/album/{id}/upload', 'PhotosController@upload')->where('id', '[0-9]+');
 
 Route::get('/', 'PagesController@home');
 

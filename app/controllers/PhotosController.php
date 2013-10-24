@@ -23,7 +23,13 @@ class PhotosController extends BaseController {
         return View::make('albums.manage.upload', compact('album'));
     }
 
-    public function store() {
-
+    public function upload($albumId) {
+        if (Input::hasFile('photo')) {
+            $photoId = $this->photosRepository->create(array('album_id' => $albumId));
+            $file = Input::file('photo');
+            Img::savePhoto($file, $photoId);
+            return $this->jsonSuccess();
+        }
+        return $this->jsonFail('No photo file is found.');
     }
 }

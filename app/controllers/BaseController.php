@@ -27,4 +27,16 @@ class BaseController extends Controller {
         Session::flash('success', $message);
     }
 
+    protected function jsonSuccess($data = null) {
+        return Response::json(array('status' => 'success', 'message' => '', 'data' => $data));
+    }
+
+    protected function jsonFail($message = 'Server internal error', $data = null) {
+        return Response::json(array('status' => 'fail', 'message' => $message, 'data' => $data));
+    }
+
+    protected function json($status, $message, $data = null) {
+        return Response::json(array('status' => $status, 'message' => $message, 'data' => $data));
+    }
+
 }
