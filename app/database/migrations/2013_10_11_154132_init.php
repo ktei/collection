@@ -65,6 +65,7 @@ class Init extends Migration {
         Schema::create('photos', function($table) {
             $table->increments('id');
             $table->integer('album_id')->unsigned();
+            $table->integer('user_id')->unsigned();
             $table->text('description')->nullable();
             $table->integer('comments_count')->default(0);;
 

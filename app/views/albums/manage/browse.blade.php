@@ -7,7 +7,7 @@
     @foreach ($photos as $photo)
     <div class="photo">
         <div class="thumbnail">
-            <img src="http://placehold.it/200x150">
+            <img src="{{$photo->md_url}}">
         </div>
     </div>
     @endforeach
