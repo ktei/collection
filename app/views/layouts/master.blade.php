@@ -17,6 +17,7 @@
     <script src="js/respond.min.js"></script>
     <![endif]-->
 
+
     <!-- TODO put favicon here -->
     <body>
         <header>
@@ -35,6 +36,11 @@
             @show
         </div>
     </body>
-
-    {{HTML::script('packages/requirejs/require.js', array('data-main' => 'js/main'))}}
+    <script>
+        window.jsBase = "{{URL::asset('js')}}";
+    </script>
+    {{HTML::script('packages/requirejs/require.js')}}
+    {{HTML::script('js/main.js')}}
+    @section('scripts')
+    @show
 </head>
