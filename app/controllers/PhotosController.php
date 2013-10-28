@@ -24,15 +24,13 @@ class PhotosController extends BaseController {
     }
 
     public function upload($albumId) {
-        if (Input::hasFile('photos')) {
-            $files = Input::file('photos');
-            foreach($files as $file) {
-                $photoId = $this->photosRepository->create(array(
-                    'album_id' => $albumId,
-                    'user_id' => Auth::user()->id
-                ));
-                Img::savePhoto($file, $photoId);
-            }
+        if (Input::hasFile('photo')) {
+            $file = Input::file('photo');
+            $photoId = $this->photosRepository->create(array(
+                'album_id' => $albumId,
+                'user_id' => Auth::user()->id
+            ));
+            Img::savePhoto($file, $photoId);
             return $this->jsonSuccess();
         }
         return $this->jsonFail('No photo file is found.');

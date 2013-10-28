@@ -14,3 +14,14 @@
   .box-shadow(#888 0 0 5px);
   .border-radius(5px);
 }
+
+.thumb(@max-width) {
+  margin:auto;
+  margin-bottom:10px;
+  max-width: @max-width;
+  @media (min-width: @screen-sm) {
+    margin:0;
+    margin-bottom:10px;
+    max-width: @max-width;
+  }
+}

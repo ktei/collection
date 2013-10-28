@@ -5910,7 +5910,7 @@ body {
   padding-top: 70px;
 }
 .container {
-  max-width: 768px;
+  max-width: 920px;
 }
 form .caption {
   font-size: 2em;
@@ -5980,6 +5980,13 @@ span.error {
   margin-bottom: 10px;
   max-width: 250px;
 }
+@media (min-width: 768px) {
+  .album .thumbnail {
+    margin: 0;
+    margin-bottom: 10px;
+    max-width: 250px;
+  }
+}
 .album .caption {
   height: 50px;
   overflow: hidden;
@@ -5995,7 +6002,7 @@ span.error {
 @media (min-width: 768px) {
   .photo {
     float: left;
-    width: 33.33333333333333%;
+    width: 25%;
   }
 }
 .photo .thumbnail {

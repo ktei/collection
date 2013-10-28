@@ -32,7 +32,8 @@ class PhotosControllerTest extends TestCase {
     public function test_upload_should_succeed() {
         $this->mockLogin();
         $imageMock = $this->mockUploadFile();
-        $this->input['photos'] = array($imageMock);
+        //$this->input['photos'] = array($imageMock);
+        $this->input['photo'] = $imageMock;
         $mock = Mockery::mock('Rui\Collection\Repositories\PhotosRepositoryInterface');
         $mock->shouldReceive('create')->once();
         $this->app->instance('Rui\Collection\Repositories\PhotosRepositoryInterface', $mock);

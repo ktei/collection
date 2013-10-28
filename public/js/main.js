@@ -8,7 +8,8 @@
       knockout: 'vendor/knockoutjs/knockout-3.0.0',
       'jquery.ui.widget': '../packages/jquery-file-upload/js/vendor/jquery.ui.widget',
       'jquery.iframe.transport': '../packages/jquery-file-upload/js/jquery.iframe-transport',
-      'jquery.fileupload': '../packages/jquery-file-upload/js/jquery.fileupload'
+      'jquery.fileupload': '../packages/jquery-file-upload/js/jquery.fileupload',
+      humanize: '../packages/humanize/humanize'
     },
     shim: {
       'bootstrap': ['jquery'],
